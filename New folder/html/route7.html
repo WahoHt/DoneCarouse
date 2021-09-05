@@ -1,0 +1,44 @@
+<div layout="column" ng-cloak>
+  <md-content style="width: 700px; height: 500px; display: flex">
+    <div
+      ng-repeat="images in dataImageLoc track by $index"
+      ng-show="$index === current"
+    >
+      <img
+        data-ng-src="{{images.dataBase64}}"
+        style="height: 400px; width: 400px"
+        remove-me
+      />
+      <button ng-click="removeImg(images.idItem)">Remove</button>
+    </div>
+    <div style="margin-top: auto">
+      <md-button
+        ng-click="prevSlide()"
+        style="background-color: cadetblue; height: 30px; width: 30px"
+        >prev</md-button
+      >
+      <md-button
+        ng-click="nextSlide()"
+        style="background-color: cadetblue; height: 30px; width: 30px"
+        >next</md-button
+      >
+    </div>
+  </md-content>
+
+  <form layout="column" class="md-padding">
+    <div layout="row" layout-xs="column">
+      <div>
+        <div ng-repeat="error in errorUserImage">
+          {{error.name}} {{ error.type || error.width || error.height ||
+          error.size}}
+        </div>
+        <input type="file" id="files" name="files[]" multiple />
+        <md-button
+          ng-click="submitImages()"
+          style="background-color: cadetblue; height: 30px; width: 30px"
+          >Add</md-button
+        >
+      </div>
+    </div>
+  </form>
+</div>

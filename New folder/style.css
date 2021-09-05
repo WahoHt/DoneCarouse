@@ -1,0 +1,8 @@
+div[error]{
+    color: red;
+    font-size: 30px;
+}
+[error]{
+    color:red;
+    font-size: 45px;
+}

@@ -1,0 +1,19 @@
+<!-- <div layout="column" ng-cloak style="background-color:blanchedalmond;width: 200px;height: 200px;">
+      <ul style="padding-left: 10px;">
+        <li ng-repeat = 'events in Event' style="list-style-type: none;
+        margin-bottom: 10px;">
+          {{events.id}} and {{events.city.data.title || "No city"}}
+        </li>
+      </ul>
+    <div>
+  </div>
+</div> -->
+
+<uib-accordion close-others="oneAtATime">
+  <div uib-accordion-group class="panel-default" ng-repeat = 'events in Event' heading="{{events.id}}" is-open="group.open" style="width: 300px;">
+      {{events.event_group_title}} and City: {{events.city.data.title || "No city"}}
+      <!-- {{events.images.data[0].path}} -->
+      <img  data-ng-src="{{events.images.data[0].host + events.images.data[0].path}}" style="width: 250px;">
+  </div>
+</uib-accordion>
+</div>

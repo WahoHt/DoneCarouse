@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS: UI-Router Quick Start</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.3/angular-material.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.1/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.4.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.angularjs.org/1.8.2/angular-sanitize.js"></script>
+		<!-- // -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.4.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="index.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="btn-group" uib-dropdown is-open="status.isopen">
+        <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+          dropdown <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+          <li><a ui-sref="route1" role="menuitem">Route 1</a></li>
+          <li><a ui-sref="route2" role="menuitem">Route 2</a></li>
+          <li><a ui-sref="route3" role="menuitem">Route 3</a></li>
+          <li><a ui-sref="route4" role="menuitem">Route 4</a></li>
+          <li><a ui-sref="route5" role="menuitem">Route 5</a></li>
+          <li><a ui-sref="route6" role="menuitem">Route 6</a></li>
+          <li><a ui-sref="route7" role="menuitem">Route 7</a></li>
+          <li><a ui-sref="route8" role="menuitem">Route 8</a></li>
+        </ul>
+      </div>
+      </div> 
+    </div>
+  </div>
+  <ui-view></ui-view> 
+</body>
+
+</html>

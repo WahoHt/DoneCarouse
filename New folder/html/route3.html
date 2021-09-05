@@ -1,0 +1,79 @@
+<div class="form-block" style="display: flex; justify-content: center">
+  <form
+    name="formValidation"
+    style="
+      background-color: #e6e4da;
+      width: 600px;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px;
+    "
+  >
+    <div
+      class="form-name"
+      style="display: flex; justify-content: center; color: teal"
+    >
+      <h2>Form</h2>
+    </div>
+    <div class="working-area" style="width: 100%">
+      <div class="inp-name" style="margin: 10px">
+        <md-input-container class="md-block" style="border-color: wheat">
+          <label style="color: teal; font-size: 20px">Last Name:</label>
+          <input
+            ng-model="lastname"
+            name="lastname"
+            ng-minlength="5"
+            ng-maxlength="15"
+            style="font-size: 20px; width: 100%"
+          />
+        </md-input-container>
+      </div>
+      <div class="inp-name" style="margin: 10px" style="border-color: wheat">
+        <md-input-container class="md-block">
+          <label style="color: teal; font-size: 20px">Email:</label>
+          <input
+            ng-model="email"
+            type="email"
+            name="email"
+            style="
+              font-size: 20px;
+              width: 100%;
+              background: none;
+              border-width: 0 0 1px;
+            "
+          />
+        </md-input-container>
+      </div>
+      <div class="inp-name" style="margin: 10px" style="border-color: wheat">
+        <md-input-container class="md-block">
+          <label style="color: teal; font-size: 20px">Password:</label>
+          <input
+            ng-model="password"
+            type="text"
+            name="password"
+            style="
+              font-size: 20px;
+              width: 100%;
+              background: none;
+              border-width: 0 0 1px;
+            "
+          />
+        </md-input-container>
+      </div>
+      <div>
+        <md-button
+          class="md-raised"
+          ng-click="addItems(lastname,email,password)"
+          style="color: teal"
+          >Button</md-button
+        >
+      </div>
+    </div>
+  </form>
+  <div>
+    <h2>New User</h2>
+    <div ng-repeat="newUserData in userData.users">
+      Name:{{lastname}} Email:{{email}} Password:{{password}}
+    </div>
+  </div>
+</div>
